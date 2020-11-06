@@ -20,7 +20,8 @@ namespace WenSonarCloudProj.Controllers
 
         public IActionResult Index()
         {
-            
+
+            string val = string.Empty;
             bool blnWork = true;
 
             //if (val == "Good")
