@@ -24,10 +24,10 @@ namespace WenSonarCloudProj.Controllers
             string val = string.Empty;
             bool blnWork = true;
 
-            //if (val == "Good")
-            //    blnWork = true;
-            //else
-            //    blnWork = false;
+            if (val == "Good")
+                blnWork = true;
+            else
+                blnWork = false;
 
             if (blnWork)
                 ViewBag.Work = "Good Work";
@@ -40,14 +40,14 @@ namespace WenSonarCloudProj.Controllers
 
         public IActionResult RedirectMe(string url)
         {
-            return Redirect(url);
-
-            //if (!whiteList.Contains(url))
-            //{
-            //    return BadRequest();
-            //}
-
             //return Redirect(url);
+
+            if (!whiteList.Contains(url))
+            {
+                return BadRequest();
+            }
+
+            return Redirect(url);
         }
         public IActionResult Privacy()
         {
